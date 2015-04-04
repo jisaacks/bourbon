@@ -7,37 +7,27 @@ describe "font-face" do
 
   context "called with defaults" do
     it "outputs defaults" do
-      ruleset = "font-family: \"Helvetica\"; " +
-                "font-style: normal; " +
-                "font-weight: normal; " +
-                "src: url(\"/fonts.eot?#iefix\") " +
-                "format(\"embedded-opentype\"), " +
-                "url(\"/fonts.woff2\") format(\"woff2\"), " +
-                "url(\"/fonts.woff\") format(\"woff\"), " +
-                "url(\"/fonts.ttf\") format(\"truetype\"), " +
-                "url(\"/fonts.svg#Helvetica\") format(\"svg\");; " +
-                "font-family: \"Verdana\"; " +
-                "font-style: \"italic\"; " +
-                "font-weight: \"bold\"; " +
-                "src: url(\"/assets/fonts.eot?#iefix\") " +
-                "format(\"embedded-opentype\"), url(\"/assets/fonts.woff2\") " +
-                "format(\"woff2\"), url(\"/assets/fonts.woff\") " +
-                "format(\"woff\"), url(\"/assets/fonts.ttf\") " +
-                "format(\"truetype\"), url(\"/assets/fonts.svg#Verdana\") " +
-                "format(\"svg\");; " +
-                "font-family: \"Georgia\"; " +
-                "font-style: \"normal\"; " +
-                "font-weight: \"normal\"; " +
-                "src: url(\"/assets.eot?#iefix\") " +
-                "format(\"embedded-opentype\"), url(\"/assets.woff2\") " +
-                "format(\"woff2\"), url(\"/assets.woff\") format(\"woff\"), " +
-                "url(\"/assets.ttf\") format(\"truetype\"), " +
-                "url(\"/assets.svg#Georgia\") format(\"svg\");; " +
-                "font-family: \"Arial\"; " +
-                "font-style: \"normal\"; " +
-                "font-weight: \"normal\"; " +
-                "src: url(\"/.woff2\") format(\"woff2\"), " +
-                "url(\"/.svg#Arial\") format(\"svg\");"
+      ruleset = 'font-family: "source-sans-pro"; ' +
+                'font-style: normal; ' +
+                'font-weight: normal; ' +
+                'src: url("/fonts/source-sans-pro/source-sans-pro-regular.woff2") format("woff2"), url("/fonts/source-sans-pro/source-sans-pro-regular.woff") format("woff"), url("/fonts/source-sans-pro/source-sans-pro-regular.ttf") format("truetype");'
+
+                # 'font-family: "roboto"; ' +
+                # 'font-style: "italic"; ' +
+                # 'font-weight: "bold"; ' +
+                # 'src: url("/assets/fonts/Roboto-BoldItalic.ttf") ' +
+                # 'format("truetype");'
+
+                # 'font-family: "pitch"; ' +
+                # 'font-style: "normal"; ' +
+                # 'font-weight: "normal"; ' +
+                # 'src: url("/fonts/pitch.woff") format("woff");'
+
+                # 'font-family: "circular"; ' +
+                # 'font-style: "normal"; ' +
+                # 'font-weight: "normal"; ' +
+                # 'src: url("/circular.woff2") format("woff2"), ' +
+                # 'url("/circular.svg#circular") format("svg");'
 
       expect("@font-face").to have_ruleset(ruleset)
     end

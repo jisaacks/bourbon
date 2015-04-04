@@ -1,6 +1,6 @@
 @import "setup";
 
-@include font-face("Helvetica", "/fonts");
-@include font-face("Verdana", "/assets/fonts", "bold", "italic");
-@include font-face("Georgia", "/assets", "normal", "normal", false);
-@include font-face("Arial", "/", "normal", "normal", false, woff2 svg);
+@include font-face("source-sans-pro", "/fonts/source-sans-pro/source-sans-pro-regular");
+// @include font-face("roboto", "/assets/fonts/Roboto-BoldItalic", "bold", "italic", $file-formats: ttf);
+// @include font-face("pitch", "/fonts/pitch", "normal", "normal", false, woff);
+// @include font-face("circular", "/circular", $file-formats: woff2 svg);
